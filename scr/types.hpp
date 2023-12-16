@@ -1,5 +1,6 @@
 #ifndef __TAUR_BASE_TYPES
 #define __TAUR_BASE_TYPES
+#define NULL 0
 #endif
 
 namespace types
@@ -17,4 +18,10 @@ namespace types
     typedef unsigned long long size_t;
 
     typedef char * string;
+
+    typedef long int intptr_t;
+    typedef unsigned long int uintptr_t;
+
+    //typedef void * any; 
+    //:)
 } 
