@@ -6,13 +6,19 @@
 #include "types.hpp"
 #endif
 
-namespace malloc 
+namespace mem 
 {
+    types::size_t align(types::size_t n) {
+        return (n + sizeof(types::intptr_t) - 1) & ~(sizeof(types::intptr_t) - 1);
+    }
+
     typedef struct __chunk
     {
         types::size_t size;
         bool used;
         memory_chunk *prev;
-        types::uintptr_t data[1];
+        types::intptr_t data[1];
     } memory_chunk;
+
+    
 }

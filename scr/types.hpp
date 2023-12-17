@@ -22,6 +22,15 @@ namespace types
     typedef long int intptr_t;
     typedef unsigned long int uintptr_t;
 
-    //typedef void * any; 
-    //:)
+    template <class T, class U>
+    struct same_types
+    {
+        static constexpr bool value = false;
+    };
+
+    template <class T>
+    struct same_types<T, T>
+    {
+        static constexpr bool value = true;
+    };
 } 
