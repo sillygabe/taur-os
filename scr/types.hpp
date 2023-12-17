@@ -23,13 +23,13 @@ namespace types
     typedef unsigned long int uintptr_t;
 
     template <class T, class U>
-    struct same_types
+    struct is_same
     {
         static constexpr bool value = false;
     };
 
     template <class T>
-    struct same_types<T, T>
+    struct is_same<T, T>
     {
         static constexpr bool value = true;
     };
