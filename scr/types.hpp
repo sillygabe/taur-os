@@ -1,7 +1,6 @@
 #ifndef __TAUR_BASE_TYPES
 #define __TAUR_BASE_TYPES
 #define NULL 0
-#endif
 
 namespace types
 {
@@ -22,15 +21,29 @@ namespace types
     typedef long int intptr_t;
     typedef unsigned long int uintptr_t;
 
-    template <class T, class U>
+    template <typename T, typename U>
     struct is_same
     {
         static constexpr bool value = false;
+        constexpr operator bool() const 
+        {
+            return false;
+        }
     };
 
-    template <class T>
+    template <typename T>
     struct is_same<T, T>
     {
         static constexpr bool value = true;
+        constexpr operator bool() const 
+        {
+            return true;
+        }
     };
+
+    //Bool, checks if the types are the same
+    //And yes, types are accepted as parametres
+    #define same_types(A, B) types::is_same<A, B>()
 } 
+
+#endif
