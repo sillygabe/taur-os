@@ -40,10 +40,6 @@ namespace types
             return true;
         }
     };
-
-    //Bool, checks if the types are the same
-    //And yes, types are accepted as parametres
-    #define same_types(A, B) types::is_same<A, B>()
 } 
 
 #endif
