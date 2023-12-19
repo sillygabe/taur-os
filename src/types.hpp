@@ -1,5 +1,5 @@
-#ifndef __TAUR_BASE_TYPES
-#define __TAUR_BASE_TYPES
+#ifndef _TAUR_BASE_TYPES
+#define _TAUR_BASE_TYPES
 #define NULL 0
 
 namespace types
