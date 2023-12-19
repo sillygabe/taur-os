@@ -1,8 +1,9 @@
 #ifndef _TAUR_BASE_TYPES
 #define _TAUR_BASE_TYPES
+
 #define NULL 0
 
-namespace types
+namespace sys
 {
     typedef char int8_t;
     typedef unsigned char uint8_t;
@@ -16,7 +17,7 @@ namespace types
     typedef long long int64_t;
     typedef unsigned long long size_t;
 
-    typedef char * string;
+    typedef char * string_t;
 
     typedef long int intptr_t;
     typedef unsigned long int uintptr_t;

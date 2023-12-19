@@ -1,36 +1,44 @@
-template <typename T, unsigned long long size>
-class array
+#ifndef _TAUR_ARRAY
+#define _TAUR_ARRAY 
+
+namespace sys 
 {
-private:
-    T arr[size];
-public:
-    array() = default;
-    ~array() = default;
-    array(T a[size])
+    template <typename T, unsigned long long size>
+    class array
     {
-        for (int i = 0; i < size; i++)
+    private:
+        T arr[size];
+    public:
+        array() = default;
+        ~array() = default;
+        array(T a[size])
         {
-            this->arr[i] = a[i];
+            for (int i = 0; i < size; i++)
+            {
+                this->arr[i] = a[i];
+            }
         }
-    }
 
-    T &operator[](unsigned long long s)
-    {
-        return (this->arr[s]);
-    }
+        T &operator[](unsigned long long s)
+        {
+            return (this->arr[s]);
+        }
 
-    T *begin()
-    {
-        return &(this->arr[0]);
-    }
+        T *begin()
+        {
+            return &(this->arr[0]);
+        }
 
-    T *end()
-    {
-        return &(this->arr[size]);
-    }
+        T *end()
+        {
+            return &(this->arr[size]);
+        }
 
-    unsigned long long get_size()
-    {
-        return size;
-    }
-};
+        unsigned long long get_size()
+        {
+            return size;
+        }
+    };
+}
+
+#endif

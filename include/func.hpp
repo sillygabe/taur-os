@@ -1,15 +1,22 @@
-template <typename Ret, typename ...Params>
-class func
+#ifndef _TAUR_FUNC
+#define _TAUR_FUNC
+
+namespace sys
 {
-private:
-    Ret (*fn) (Params...);
-public:
-    func(Ret (*fn2) (Params...))
+    template <typename Ret, typename ...Params>
+    class func
     {
-        this->fn = fn2;
-    }
-    Ret run(Params... args)
-    {
-        return this->fn(args...);
-    }
-};
+    private:
+        Ret (*fn) (Params...);
+    public:
+        func(Ret (*fn2) (Params...))
+        {
+            this->fn = fn2;
+        }
+        Ret run(Params... args)
+        {
+            return this->fn(args...);
+        }
+    };
+}
+#endif
