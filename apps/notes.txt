@@ -1,0 +1,5 @@
+just some of my thoughts on the os
+
+1.  several headers for both gui/sys info
+2.  window settings (will work kinda like sdl but easier)
+3.  all files in /var/bin are automatically console apps
