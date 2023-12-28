@@ -48,6 +48,8 @@ namespace std __attribute__ ((__visibility__ ("default")))
     constexpr const _Tp*
     end(initializer_list<_Tp> __ils) noexcept
     { return __ils.end(); }
+
+    
 }
 
 #endif
