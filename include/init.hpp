@@ -49,7 +49,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
     end(initializer_list<_Tp> __ils) noexcept
     { return __ils.end(); }
 
-    
+    #define init_list initializer_list
 }
 
 #endif
