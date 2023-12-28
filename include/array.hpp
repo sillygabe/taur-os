@@ -1,7 +1,7 @@
 #ifndef _TAUR_ARRAY
 #define _TAUR_ARRAY 
 
-namespace std 
+namespace sys 
 {
     template <typename T, unsigned long long size>
     class array

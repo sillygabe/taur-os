@@ -1,7 +1,7 @@
 #ifndef _TAUR_FUNC
 #define _TAUR_FUNC
 
-namespace std
+namespace sys
 {
     template <typename Ret, typename ...Params>
     class func

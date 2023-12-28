@@ -3,7 +3,7 @@
 
 #define NULL 0
 
-namespace std
+namespace sys
 {
     typedef char int8_t;
     typedef unsigned char uint8_t;
